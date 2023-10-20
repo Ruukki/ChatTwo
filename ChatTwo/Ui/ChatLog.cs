@@ -2,6 +2,8 @@ using System.Diagnostics;
 using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
+using ChatTranslate;
 using ChatTwo.Code;
 using ChatTwo.GameFunctions.Types;
 using ChatTwo.Resources;
@@ -52,6 +54,7 @@ internal sealed class ChatLog : IUiComponent {
     private HashSet<string> AllCommands { get; } = new();
 
     internal ChatLog(PluginUi ui) {
+        CustomFeatures._plugin = ui.Plugin;
         this.Ui = ui;
         this.PayloadHandler = new PayloadHandler(this.Ui, this);
         this.HandlerLender = new Lender<PayloadHandler>(() => new PayloadHandler(this.Ui, this));
@@ -639,6 +642,7 @@ internal sealed class ChatLog : IUiComponent {
     private void SendChatBox(Tab? activeTab) {
         if (!string.IsNullOrWhiteSpace(this.Chat)) {
             var trimmed = this.Chat.Trim();
+            trimmed = Slutify.Translate(trimmed, this._tellTarget != null);
             this.AddBacklog(trimmed);
             this._inputBacklogIdx = -1;
 

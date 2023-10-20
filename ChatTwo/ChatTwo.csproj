@@ -27,6 +27,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Reference Include="ChatTranslate">
+          <HintPath>..\..\..\..\source\repos\ChatTranslate\ChatTranslate\bin\Debug\net6.0\ChatTranslate.dll</HintPath>
+        </Reference>
         <Reference Include="Dalamud">
             <HintPath>$(DalamudLibPath)\Dalamud.dll</HintPath>
             <Private>false</Private>
@@ -58,15 +61,15 @@
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Include="fonts\NotoSans-Italic.ttf"/>
-        <EmbeddedResource Include="fonts\NotoSans-Regular.ttf"/>
-        <EmbeddedResource Include="fonts\NotoSansJP-Regular.otf"/>
-        <EmbeddedResource Include="fonts\NotoSerif-Italic.ttf"/>
-        <EmbeddedResource Include="fonts\NotoSerif-Regular.ttf"/>
-        <EmbeddedResource Include="fonts\OpenSans-Italic.ttf"/>
-        <EmbeddedResource Include="fonts\OpenSans-Regular.ttf"/>
-        <EmbeddedResource Include="fonts\Roboto-Italic.ttf"/>
-        <EmbeddedResource Include="fonts\Roboto-Regular.ttf"/>
+        <EmbeddedResource Include="fonts\NotoSans-Italic.ttf" />
+        <EmbeddedResource Include="fonts\NotoSans-Regular.ttf" />
+        <EmbeddedResource Include="fonts\NotoSansJP-Regular.otf" />
+        <EmbeddedResource Include="fonts\NotoSerif-Italic.ttf" />
+        <EmbeddedResource Include="fonts\NotoSerif-Regular.ttf" />
+        <EmbeddedResource Include="fonts\OpenSans-Italic.ttf" />
+        <EmbeddedResource Include="fonts\OpenSans-Regular.ttf" />
+        <EmbeddedResource Include="fonts\Roboto-Italic.ttf" />
+        <EmbeddedResource Include="fonts\Roboto-Regular.ttf" />
     </ItemGroup>
 
     <ItemGroup>

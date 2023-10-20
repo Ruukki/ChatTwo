@@ -13,7 +13,7 @@ namespace ChatTwo;
 
 // ReSharper disable once ClassNeverInstantiated.Global
 public sealed class Plugin : IDalamudPlugin {
-    internal const string PluginName = "Chat 2";
+    internal const string PluginName = "Chat 2.1";
 
     internal static string Name => PluginName;
 

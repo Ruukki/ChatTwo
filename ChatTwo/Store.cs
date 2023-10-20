@@ -365,6 +365,7 @@ internal class Store : IDisposable {
         var messageChunks = ChunkUtil.ToChunks(message, ChunkSource.Content, chatCode.Type).ToList();
 
         var msg = new Message(this.CurrentContentId, chatCode, senderChunks, messageChunks, sender, message);
+        CustomFeatures.MatchMessage(msg);
         this.AddMessage(msg, this.Plugin.Ui.CurrentTab);
 
         var idx = this.Plugin.Functions.GetCurrentChatLogEntryIndex();
